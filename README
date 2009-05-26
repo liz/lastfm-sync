@@ -1,0 +1,17 @@
+Lastfm Sync
+
+Super simple last.fm chart syncing for django.
+
+Basically this can import any or all of the following last.fm charts into your database:
+
+weeklyartistchart (top weekly artists), weeklytrackchart (top weekly tracks), weeklyalbumchart (top weekly albums), recenttracks (most recently played tracks) and recentlovedtracks (most recently loved tracks).
+
+Usage:
+
+from lastfm.lastfm import LastfmSyncr
+l=LastfmSyncr()
+l.syncposts(user='username', chart='weeklyartistchart')
+l.syncposts(user='username', chart='weeklytrackchart')
+l.syncposts(user='username', chart='weeklyalbumchart')
+l.syncposts(user='username', chart='recentlovedtracks')
+l.syncposts(user='username', chart='recenttracks')
